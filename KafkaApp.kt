@@ -1,3 +1,5 @@
+@file:JvmName("Main")
+
 package kafka
 
 import arrow.continuations.SuspendApp
