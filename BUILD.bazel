@@ -1,0 +1,16 @@
+load("@rules_kotlin//kotlin:jvm.bzl", "kt_jvm_binary")
+
+kt_jvm_binary(
+    name = "app",
+    srcs = [
+        "KafkaApp.kt",
+    ],
+    deps = [
+        "@maven//:org_jetbrains_kotlinx_kotlinx_coroutines_core_jvm",
+        "@maven//:io_arrow_kt_suspendapp_jvm",
+        "@maven//:org_apache_kafka_kafka_clients",
+        "@maven//:org_apache_kafka_kafka_streams",
+        "@maven//:io_github_nomisrev_kotlin_kafka",
+    ],
+    main_class = "kafka.App",
+)
